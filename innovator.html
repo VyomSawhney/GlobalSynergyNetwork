@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="viewport" content="with=device-width, initial-scale=1.0">
+  <title>GSN</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <link rel="stylesheet" href="apply.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet"></head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+<script>
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  window.location.href = "mobileindex.html";
+  document.write("mobile device");
+}
+</script>
+
+<body>
+  <section class="header">
+    <nav>
+      <a href="homepage.html"><img class="logo" src="images/logo.png"></a>
+      <div class="nav-links">
+        <ul>
+          <li><a class="signin" href="homepage.html">Home</a></li>
+          <li><a class="signin" href="problemfinder.html">Problem Database</a></li>
+          <li><a class="signin" href="collaborationspace.html">Collaboration Spaces</a></li>
+          <li><a class="signin" href="experts.html">Expert Finder</a></li>
+          <li><a class="signin" href="solutions.html">Crowdsourced Solutions</a></li>
+          <li><a class="signin" href="funds.html">Funding Opportunities</a></li>
+          <li><a class="signin" href="index.html">Sign Out</a></li>
+        </ul>
+    </nav>
+
+
+
+          <div class="loader-wrapper">
+              <span class="loader"><span class="loader-inner"></span></span>
+          </div>
+
+          <script>
+              $(window).on("load",function(){
+                $(".loader-wrapper").fadeOut("slow");
+              });
+          </script>
+    <form id="application" method="POST" action="https://script.google.com/macros/s/AKfycbyrwrM0TbKMLMcvFoswVwideji6k_dgI3Msh9tBVg9NEUCiDQBj55o1nghYWK3L-m-8vg/exec">
+        <h1>Application Form</h1>
+        <p>Please fill in this form to apply for funding.</p>
+        <hr>Name: <input type="text" placeholder="Enter Name" name="name" required>
+        <hr>Email: <input type="text" placeholder="Enter Email" name="email" required>
+        <hr>Phone Number: <input type="text" placeholder="Enter Phone Number" name="phone" required>
+        <hr>Specialization: <input type="text" placeholder="Enter Specialization" name="specialization" required>
+        <hr>Experience: <input type="text" placeholder="Enter Experience" name="experience" required>
+        <button type="submit" id="submit-btn">Submit Application</button>
+    </form>
+    <script>
+        window.addEventListener("load", function() {
+            const form = document.getElementById('application');
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const data = new FormData(form);
+                const action = e.target.action;
+                fetch(action, {
+                    method: 'POST',
+                    body: data,
+                })
+                    .then(() => {
+                        alert("Success!");
+                    })
+            });
+        });
+    </script>
+    <style>
+      #application {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      #application h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      #application input[type="text"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        outline: none;
+      }
+
+      #application input[type="text"]:focus {
+        border-color: #4CAF50;
+      }
+
+      #application hr {
+        border: 0;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 20px;
+      }
+    </style>
+    <script>
+      const inputs = document.querySelectorAll('#application input[type="text"]');
+
+      inputs.forEach((input) => {
+        input.addEventListener('focus', () => {
+          input.style.transition = 'border-color 0.3s ease-in-out';
+        });
+
+        input.addEventListener('blur', () => {
+          input.style.transition = 'border-color 0.3s ease-in-out';
+        });
+      });
+    </script>
+
+
+  </section>
+
+
+
+
+</body>
+
+</html>

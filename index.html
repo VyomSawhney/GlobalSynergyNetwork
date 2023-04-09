@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="viewport" content="with=device-width, initial-scale=1.0">
+  <title>GSN</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet"></head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+<script>
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  window.location.href = "mobileindex.html";
+  document.write("mobile device");
+}
+</script>
+
+<body>
+  <section class="header">
+    <nav>
+      <a href="index.html"><img class="logo" src="images/logo.png"></a>
+      <div class="nav-links">
+        <ul>
+          <li><a class="signin" href="signin.html">Sign in</a></li>
+        </ul>
+    </nav>
+
+
+
+          <div class="loader-wrapper">
+              <span class="loader"><span class="loader-inner"></span></span>
+          </div>
+
+          <script>
+              $(window).on("load",function(){
+                $(".loader-wrapper").fadeOut("slow");
+              });
+          </script>
+
+      <div class="text-box-header">
+        <p>Global Synergy Network</p >
+      </div>
+
+      <div class="text-box-rest">
+        <p>Empowering individuals and organizations to collaborate and innovate, driving solutions for pressing global challenges. Our platform connects experts, provides funding opportunities, and fosters knowledge-sharing, accelerating positive change for a better tomorrow.</p>
+      </div>
+  </section>
+
+
+
+
+</body>
+
+</html>

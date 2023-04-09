@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="viewport" content="with=device-width, initial-scale=1.0">
+  <title>GSN</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <link rel="stylesheet" href="homepage.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet"></head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+<script>
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  window.location.href = "mobileindex.html";
+  document.write("mobile device");
+}
+</script>
+
+<body>
+  <section class="header">
+    <nav>
+      <a href="homepage.html"><img class="logo" src="images/logo.png"></a>
+      <div class="nav-links">
+        <ul>
+          <li><a class="signin" href="homepage.html">Home</a></li>
+          <li><a class="signin" href="problemfinder.html">Problem Database</a></li>
+          <li><a class="signin" href="collaborationspace.html">Collaboration Spaces</a></li>
+          <li><a class="signin" href="experts.html">Expert Finder</a></li>
+          <li><a class="signin" href="solutions.html">Crowdsourced Solutions</a></li>
+          <li><a class="signin" href="funds.html">Funding Opportunities</a></li>
+          <li><a class="signin" href="index.html">Sign Out</a></li>
+        </ul>
+    </nav>
+
+
+
+          <div class="loader-wrapper">
+              <span class="loader"><span class="loader-inner"></span></span>
+          </div>
+
+          <script>
+              $(window).on("load",function(){
+                $(".loader-wrapper").fadeOut("slow");
+              });
+          </script>
+
+      <div class="text-box-header">
+        <p>You Can Make An Impact</p>
+      </div>
+
+      <div class="text-box-rest">
+        <p>At Global Synergy Network, we believe that every individual has the potential to make a difference. By harnessing the power of collective wisdom, creativity, and expertise, we can drive meaningful change to address the world's most pressing challenges.</p> <br>
+
+          <p>As a member of our global community, you can:</p>
+
+        &emsp;<p>1. <b>Contribute</b> your skills and knowledge to solve complex problems across various fields such as the environment, health, education, poverty, technology, and infrastructure.<br>
+        2. <b>Collaborate</b> with experts, innovators, and organizations from around the world to develop groundbreaking solutions and make lasting change.<br>
+        3. <b>Access</b> resources, tools, and funding opportunities to turn your ideas into reality, while gaining valuable experience and expanding your professional network.<br>
+        4. <b>Stay informed</b> on the latest trends, research, and technologies in your areas of interest, empowering you to make a greater impact.<br>
+        5. <b>Participate</b> in our reward system, earning points and recognition for your contributions and unlocking new opportunities within the platform.</p>
+      </div>
+  </section>
+
+
+
+
+</body>
+
+</html>

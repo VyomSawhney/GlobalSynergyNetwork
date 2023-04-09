@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="viewport" content="with=device-width, initial-scale=1.0">
+  <title>GSN</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <link rel="stylesheet" href="apply.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet"></head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+<script>
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  window.location.href = "mobileindex.html";
+  document.write("mobile device");
+}
+</script>
+
+<body>
+  <section class="header">
+    <nav>
+      <a href="homepage.html"><img class="logo" src="images/logo.png"></a>
+      <div class="nav-links">
+        <ul>
+          <li><a class="signin" href="homepage.html">Home</a></li>
+          <li><a class="signin" href="problemfinder.html">Problem Database</a></li>
+          <li><a class="signin" href="collaborationspace.html">Collaboration Spaces</a></li>
+          <li><a class="signin" href="experts.html">Expert Finder</a></li>
+          <li><a class="signin" href="solutions.html">Crowdsourced Solutions</a></li>
+          <li><a class="signin" href="funds.html">Funding Opportunities</a></li>
+          <li><a class="signin" href="index.html">Sign Out</a></li>
+        </ul>
+    </nav>
+
+
+
+          <div class="loader-wrapper">
+              <span class="loader"><span class="loader-inner"></span></span>
+          </div>
+
+          <script>
+              $(window).on("load",function(){
+                $(".loader-wrapper").fadeOut("slow");
+              });
+          </script>
+    <form id="application" method="POST" action="https://sheet.best/api/sheets/b684e39f-ba00-4e9f-9915-4fe173aa6f8c">
+        <h1>Application Form</h1>
+        <p>Please fill in this form to apply for funding.</p>
+        <hr>Organization Name: <input type="text" placeholder="Enter Name" name="name" required>
+        <hr>Organization Email: <input type="text" placeholder="Enter Email" name="email" required>
+        <hr>Organization Phone Number: <input type="text" placeholder="Enter Phone Number" name="phone" required>
+        <hr>Organization Website: <input type="text" placeholder="Enter Website" name="website" required>
+        <hr>Organization Address: <input type="text" placeholder="Enter Address" name="address" required>
+        <hr>Organization City: <input type="text" placeholder="Enter City" name="city" required>
+        <hr>Organization State: <input type="text" placeholder="Enter State" name="state" required>
+        <hr>Organization Zip Code: <input type="text" placeholder="Enter Zip Code" name="zip" required>
+        <hr>Organization Country: <input type="text" placeholder="Enter Country" name="country" required>
+        <hr>Organization Description: <input type="text" placeholder="Enter Description" name="description" required>
+        <hr>Organization Mission: <input type="text" placeholder="Enter Mission" name="mission" required>
+        <hr>Organization Vision: <input type="text" placeholder="Enter Vision" name="vision" required>
+        <hr>Organization Goals: <input type="text" placeholder="Enter Goals" name="goals" required>
+        <hr>Organization Type: <input type="text" placeholder="Enter Type" name="type" required>
+        <hr>Organization Size: <input type="text" placeholder="Enter Size" name="size" required>
+        <hr>Organization Sector: <input type="text" placeholder="Enter Sector" name="sector" required>
+        <hr>Organization Industry: <input type="text" placeholder="Enter Industry" name="industry" required>
+        <hr>Organization Revenue: <input type="text" placeholder="Enter Revenue" name="revenue" required>
+        <hr>Organization Funding: <input type="text" placeholder="Enter Funding" name="funding" required>
+        <hr>Organization Funding Type: <input type="text" placeholder="Enter Funding Type" name="fundingtype" required>
+        <hr>Organization Funding Amount: <input type="text" placeholder="Enter Funding Amount" name="fundingamount" required>
+        <hr>Organization Funding Source: <input type="text" placeholder="Enter Funding Source" name="fundingsource" required>
+        <hr>Organization Funding Purpose: <input type="text" placeholder="Enter Funding Purpose" name="fundingpurpose" required>
+        <button type="submit" id="submit-btn">Submit Application</button>
+    </form>
+    <script>
+        window.addEventListener("load", function() {
+            const form = document.getElementById('application');
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const data = new FormData(form);
+                const action = e.target.action;
+                fetch(action, {
+                    method: 'POST',
+                    body: data,
+                })
+                    .then(() => {
+                        alert("Success!");
+                    })
+            });
+        });
+    </script>
+    <style>
+      #application {
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        padding: 30px;
+        border-radius: 5px;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      #application h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      #application input[type="text"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        outline: none;
+      }
+
+      #application input[type="text"]:focus {
+        border-color: #4CAF50;
+      }
+
+      #application hr {
+        border: 0;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 20px;
+      }
+    </style>
+    <script>
+      const inputs = document.querySelectorAll('#application input[type="text"]');
+
+      inputs.forEach((input) => {
+        input.addEventListener('focus', () => {
+          input.style.transition = 'border-color 0.3s ease-in-out';
+        });
+
+        input.addEventListener('blur', () => {
+          input.style.transition = 'border-color 0.3s ease-in-out';
+        });
+      });
+    </script>
+
+
+  </section>
+
+
+
+
+</body>
+
+</html>

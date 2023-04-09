@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="viewport" content="with=device-width, initial-scale=1.0">
+  <title>GSN</title>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <link rel="stylesheet" href="solutions.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet"></head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+
+<script>
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  window.location.href = "mobileindex.html";
+  document.write("mobile device");
+}
+</script>
+
+<body>
+  <section class="header">
+    <nav>
+      <a href="homepage.html"><img class="logo" src="images/logo.png"></a>
+      <div class="nav-links">
+        <ul>
+          <li><a class="signin" href="homepage.html">Home</a></li>
+          <li><a class="signin" href="problemfinder.html">Problem Database</a></li>
+          <li><a class="signin" href="collaborationspace.html">Collaboration Spaces</a></li>
+          <li><a class="signin" href="experts.html">Expert Finder</a></li>
+          <li><a class="signin" href="solutions.html">Crowdsourced Solutions</a></li>
+          <li><a class="signin" href="funds.html">Funding Opportunities</a></li>
+          <li><a class="signin" href="index.html">Sign Out</a></li>
+        </ul>
+    </nav>
+
+
+
+          <div class="loader-wrapper">
+              <span class="loader"><span class="loader-inner"></span></span>
+          </div>
+
+          <script>
+              $(window).on("load",function(){
+                $(".loader-wrapper").fadeOut("slow");
+              });
+          </script>
+
+
+  </section>
+  <div class="carousel">
+    <div class="carousel__nav">
+   <span id="moveLeft" class="carousel__arrow">
+        <svg class="carousel__icon" width="24" height="24" viewBox="0 0 24 24">
+    <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path>
+</svg>
+    </span>
+      <span id="moveRight" class="carousel__arrow" >
+      <svg class="carousel__icon"  width="24" height="24" viewBox="0 0 24 24">
+  <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path>
+</svg>
+    </span>
+    </div>
+    <div class="carousel-item carousel-item--1">
+      <div class="carousel-item__image"></div>
+      <div class="carousel-item__info">
+        <div class="carousel-item__container">
+          <h2 class="carousel-item__subtitle">Money Raised: $1,200,000</h2>
+          <h1 class="carousel-item__title">Clean Water for All</h1>
+          <p class="carousel-item__description">The "Clean Water for All" campaign aimed to provide safe and reliable drinking water to rural communities in developing countries. By installing solar-powered water filtration systems and constructing wells in remote areas, the campaign impacted the lives of over 25,000 people, helping to reduce waterborne diseases and improve overall community health. The initiative also provided educational workshops on sanitation, hygiene, and water resource management to empower local residents and ensure long-term sustainability.</p>
+          <a class="carousel-item__btn"></a>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item carousel-item--2">
+      <div class="carousel-item__image"></div>
+      <div class="carousel-item__info">
+        <div class="carousel-item__container">
+          <h2 class="carousel-item__subtitle">Money Raised: $850,000</h2>
+          <h1 class="carousel-item__title">MTechEd Connect</h1>
+          <p class="carousel-item__description">The "TechEd Connect" campaign focused on bridging the digital divide in underprivileged communities by providing access to technology and quality education. By establishing computer labs in low-income schools and offering free internet access points, the initiative reached over 10,000 students, enhancing their learning experience and digital literacy. The campaign also included teacher training programs and partnerships with tech companies to support ongoing educational resources and opportunities for the students.</p>
+          <a class="carousel-item__btn"></a>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item carousel-item--3">
+      <div class="carousel-item__image"></div>
+      <div class="carousel-item__info">
+        <div class="carousel-item__container">
+          <h2 class="carousel-item__subtitle">Money Raised: $2,000,000</h2>
+          <h1 class="carousel-item__title">Reforest Our Future</h1>
+          <p class="carousel-item__description">The "Reforest Our Future" campaign sought to combat deforestation and climate change by planting one million trees across threatened ecosystems worldwide. With the help of local communities and environmental organizations, the campaign successfully established tree nurseries and reforestation projects in 12 countries, sequestering carbon, restoring habitats, and promoting biodiversity. The initiative also developed educational programs on forest conservation and sustainable land management practices to ensure the long-term success of the reforestation efforts.</p>
+          <a class="carousel-item__btn"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item carousel-item--4">
+      <div class="carousel-item__image"></div>
+      <div class="carousel-item__info">
+        <div class="carousel-item__container">
+          <h2 class="carousel-item__subtitle">Money Raised: $1,500,000</h2>
+          <h1 class="carousel-item__title">TEmpowerHER</h1>
+          <p class="carousel-item__description">The "EmpowerHER" campaign aimed to improve gender equality and economic opportunities for women in marginalized communities. By providing training in entrepreneurship, vocational skills, and financial literacy, the initiative empowered over 8,000 women to start their own businesses or secure stable employment. The campaign also established microloan programs and mentorship networks to support the ongoing growth and success of women-led enterprises, fostering economic development and gender equality in the targeted regions.</p>
+          <a class="carousel-item__btn"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item carousel-item--5">
+      <div class="carousel-item__image"></div>
+      <div class="carousel-item__info">
+        <div class="carousel-item__container">
+          <h2 class="carousel-item__subtitle">Money Raised: $3,000,000</h2>
+          <h1 class="carousel-item__title">Solar for a Sustainable Future</h1>
+          <p class="carousel-item__description">The "Solar for a Sustainable Future" campaign promoted clean energy solutions and reduced energy poverty in remote areas by installing solar power systems for off-grid communities. Through the deployment of solar home systems, microgrids, and solar-powered water pumps, the campaign provided electricity to over 50,000 people, enabling access to lighting, communication, and clean water. The initiative also offered training programs on solar technology installation, maintenance, and entrepreneurship, creating local job opportunities and ensuring the long-term sustainability of the energy systems.</p>
+          <a class="carousel-item__btn"></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    $(function(){
+      $('.carousel-item').eq(0).addClass('active');
+      var total = $('.carousel-item').length;
+      var current = 0;
+      $('#moveRight').on('click', function(){
+        var next=current;
+        current= current+1;
+        setSlide(next, current);
+      });
+      $('#moveLeft').on('click', function(){
+        var prev=current;
+        current = current- 1;
+        setSlide(prev, current);
+      });
+      function setSlide(prev, next){
+        var slide= current;
+        if(next>total-1){
+          slide=0;
+          current=0;
+        }
+        if(next<0){
+          slide=total - 1;
+          current=total - 1;
+        }
+        $('.carousel-item').eq(prev).removeClass('active');
+        $('.carousel-item').eq(slide).addClass('active');
+        setTimeout(function(){
+
+        },800);
+
+
+
+        console.log('current '+current);
+        console.log('prev '+prev);
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>
